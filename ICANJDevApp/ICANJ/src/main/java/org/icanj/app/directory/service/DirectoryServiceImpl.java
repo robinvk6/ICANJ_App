@@ -142,4 +142,10 @@ public class DirectoryServiceImpl implements DirectoryService {
 		return directoryhibernateDao.MemFamilyNoInteractive(familyId);
 	}
 
+	@Override
+	public Family getFamily(long familyId) {
+		// TODO Auto-generated method stub
+		return directoryhibernateDao.getFamily(familyId);
+	}
+
 }

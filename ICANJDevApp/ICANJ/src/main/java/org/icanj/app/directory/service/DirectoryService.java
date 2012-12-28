@@ -20,6 +20,7 @@ public interface DirectoryService {
 	public List<Member> listMemberByFamily(long familyId);
 	public List<Member> MemFamilyNoInteractive(long familyId);
 	public Member getMember(long memberId);
+	public Family getFamily(long familyId);
 	public void removeMember(long memberId);
 	public Address findAddressById(long familyId);
 	public List<Address> listAddresses();

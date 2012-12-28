@@ -80,8 +80,12 @@ public class DirectoryHibernateDao implements DirectoryDao {
 	@Override
 	public List<Member> MemFamilyNoInteractive(long familyId) {
 		List<Member> members = hibernateTemplate.find("from Member m where m.interactiveAccess='0' and m.familyId = ?",familyId);
-		System.out.println(members.size());
 		return members;
+	}
+
+	@Override
+	public Family getFamily(long familyId) {		
+		return hibernateTemplate.get(Family.class, familyId);
 	}
 
 }
